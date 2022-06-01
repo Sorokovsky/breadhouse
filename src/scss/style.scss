@@ -8,7 +8,8 @@
 }
 ._container{
     max-width: 100%;
-    padding:0 21px;
+    padding:0 30px;
+    padding-top: 40px;
     margin-bottom: 50px;
 }
 body{
@@ -35,6 +36,7 @@ a{
     font-size: inherit;
     text-decoration: none;
     font-weight: inherit;
+    line-height: inherit
 }
 p{
     @include adaptiv-value('font-size', 26, 14, 3);
@@ -43,10 +45,7 @@ p{
     text-transform: uppercase;
     font-weight: bold;
     @include adaptiv-value('font-size', 26, 14, 3);
-    padding-top: 25px;
-    padding-bottom: 35px;
-    padding-left: 35px;
-    padding-right: 37px;
+    padding: 25px 38px;
     background: #000;
     border-radius: 25px;
     transition: .3s all ease;
@@ -60,6 +59,7 @@ ul,ol,li{
     font-family: inherit;
     font-size: inherit;
     text-decoration: none;
+    line-height: inherit;
     font-weight: inherit;
     list-style: none;
 }
@@ -72,4 +72,5 @@ ul,ol,li{
 @import 'history.scss';
 @import 'mens.scss';
 @import 'contacts.scss';
+@import 'contact.scss';
 @import 'footer.scss';

@@ -5,12 +5,12 @@ section{
     background-size: cover;
     background-position:top center;
     display: flex;
-    padding-top: 40px;
     gap: 50px;
     flex-direction: column;
     justify-content: space-between;
 }
 .intro{
+    min-height: calc(100vh - 102px);
     background-image: url('../img/bg/intro.jpg');
     background-size: cover;
     background-repeat: no-repeat;

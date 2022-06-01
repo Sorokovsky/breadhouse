@@ -2,6 +2,33 @@ const header = document.querySelector('header');
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.burger');
 const barbers = document.querySelectorAll('.barber');
+const navLink = document.querySelectorAll('a');
+const popubs = Array.from(document.querySelectorAll('.popub'));
+popubs.forEach(popub => {
+    popub.addEventListener('click', (e) => {
+        const { target } = e;
+        if (target.parentElement.classList.contains("exit")) {
+            popub.classList.remove('_active');
+        }
+    });
+});
+Array.from(navLink).forEach(link =>{
+    link.addEventListener('click', (e) => {
+        const { target } = e;
+        e.preventDefault();
+        const selector = target.getAttribute('data-open');
+        const el = document.querySelector(selector);
+        if(el ){
+              if(!el.classList.contains('_active')){
+                  el.classList.add('_active');
+                  menu.classList.remove('_active');
+                  burger.classList.remove('_active');
+                  burger.children[0].classList.remove('_active');
+              } 
+        }
+        
+    })
+});
 barbers.forEach(barber =>{
     barber.addEventListener('click', (e) => {
         const target = e.target;
@@ -10,6 +37,7 @@ barbers.forEach(barber =>{
         }
     });
 });
+
 function isWebp(){
     function testWebP(callback) {
 
@@ -29,10 +57,9 @@ function isWebp(){
         }
     });
 }
-function toggleMenu(menu, burger){
     burger.addEventListener('click', (e) => {
         e.preventDefault();
-        if (e.target.classList.contains('_active') && menu.classList.contains('_active')){
+        if (e.target.classList.contains('_active')){
             e.target.classList.remove('_active');
             e.target.children[0].classList.remove('_active');
             menu.classList.remove('_active');
@@ -42,6 +69,4 @@ function toggleMenu(menu, burger){
             menu.classList.add('_active');
         }
     });
-}
-toggleMenu(menu, burger);
 isWebp();
