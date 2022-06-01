@@ -1,5 +1,7 @@
 #contact{
+    background-image: url("../img/Contacts.jpg");
     .contact{
+        transition: .3s all ease;
         &-bottom{
             max-width: 846px;
             & h5{

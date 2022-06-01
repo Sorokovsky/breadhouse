@@ -86,6 +86,10 @@ li {
   font-size: calc(20px + 24 * ((100vw - 320px) / (1127)));
 }
 
+._lock {
+  overflow-y: hidden;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -341,12 +345,12 @@ li {
   top: 0;
   left: -100000%;
   width: 100vw;
+  z-index: 100;
   height: 100vh;
   padding-top: 148px;
   padding-left: 31px;
   overflow-y: auto;
   display: block;
-  background-image: url("../img/Contacts.jpg");
   -webkit-transition: 0.3s left ease;
   -o-transition: 0.3s left ease;
   transition: 0.3s left ease;
@@ -509,6 +513,16 @@ section {
   margin-top: 53px;
 }
 
+#contact {
+  background-image: url("../img/Contacts.jpg");
+}
+
+#contact .contact {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
 #contact .contact-bottom {
   max-width: 846px;
 }
@@ -615,6 +629,56 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.barbers {
+  background-image: url("../img/Barbers.jpg");
+  background-size: cover;
+  background-position: 0 -500px;
+  z-index: 1000000;
+  padding-left: 0;
+  background-attachment: fixed;
+  overflow-y: auto;
+  background-repeat: no-repeat;
+}
+
+.barbers .exit {
+  position: absolute;
+  top: 25px;
+  left: 41px;
+}
+
+.barbers__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1208px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.barbers__item {
+  padding-bottom: 35px;
+  border-bottom: 2px solid #C0B0B0;
+}
+
+.barbers__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.barbers__left img {
+  border-radius: 50%;
+  margin-right: 40px;
 }
 
 .footer {
@@ -808,8 +872,6 @@ section {
   }
 }
 
-.webp .popub{ background-image: url(../img/Contacts.webp); }
-
 .webp .intro{ background-image: url(../img/bg/intro.webp); }
 
 .webp .history{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.66)), to(rgba(0, 0, 0, 0.66))), url(../img/bg/history.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/history.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/history.webp); }
@@ -817,3 +879,7 @@ section {
 .webp .mens{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/bg/mens.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg/mens.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg/mens.webp); }
 
 .webp .contacts{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.66)), to(rgba(0, 0, 0, 0.66))), url(../img/bg/contacts.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/contacts.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/contacts.webp); }
+
+.webp #contact{ background-image: url(../img/Contacts.webp); }
+
+.webp .barbers{ background-image: url(../img/Barbers.webp); }

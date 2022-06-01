@@ -182,12 +182,12 @@
     top: 0;
     left: -100000%;
     width: 100vw;
+    z-index: 100;
     height: 100vh;
     padding-top: 148px;
     padding-left: 31px;
     overflow-y: auto;
     display: block;
-    background-image:url("../img/Contacts.jpg");
     transition: .3s left ease ;
     &__container{
         max-width: 1234px;

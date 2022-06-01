@@ -67,10 +67,14 @@ ul,ol,li{
     text-transform: uppercase;
     @include adaptiv-value('font-size', 44, 20, 1);
 }
+._lock{
+    overflow-y: hidden;
+}
 @import 'header.scss';
 @import 'intro.scss';
 @import 'history.scss';
 @import 'mens.scss';
 @import 'contacts.scss';
 @import 'contact.scss';
+@import 'barbers.scss';
 @import 'footer.scss';

@@ -9,6 +9,7 @@ popubs.forEach(popub => {
         const { target } = e;
         if (target.parentElement.classList.contains("exit")) {
             popub.classList.remove('_active');
+            document.body.classList.remove('_lock')
         }
     });
 });
@@ -21,8 +22,10 @@ Array.from(navLink).forEach(link =>{
         if(el ){
               if(!el.classList.contains('_active')){
                   el.classList.add('_active');
+                  document.body.classList.add('_lock');
                   menu.classList.remove('_active');
                   burger.classList.remove('_active');
+                  closeAllPopubs();
                   burger.children[0].classList.remove('_active');
               } 
         }
@@ -69,4 +72,8 @@ function isWebp(){
             menu.classList.add('_active');
         }
     });
+function closeAllPopubs(){
+    const pops = Array.from(document.querySelector('.popub'));
+    pops.forEach(pop => pop.classList.remove('_active'))
+}
 isWebp();

@@ -1,0 +1,34 @@
+.barbers{
+    background-image: url('../img/Barbers.jpg');
+    background-size: cover ;
+    background-position: 0 -500px;
+    z-index: 1000000;
+    padding-left: 0;
+    background-attachment: fixed;
+    overflow-y: auto;
+    background-repeat: no-repeat;
+    .exit{
+        position: absolute;
+        top: 25px;
+        left: 41px;
+    }
+    &__card{
+        display: flex;
+        align-items: center;
+        max-width: 1208px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    &__item{
+        padding-bottom: 35px;
+        border-bottom: 2px solid $ColorText;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            margin-right: 40px;
+        }
+    }
+}
