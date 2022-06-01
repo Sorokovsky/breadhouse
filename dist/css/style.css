@@ -333,6 +333,16 @@ li {
   color: #000;
 }
 
+.popub {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-image: url("../img/Contacts.jpg"), #FFFFFF;
+}
+
 section {
   min-height: 100vh;
   background-attachment: fixed;
@@ -655,6 +665,8 @@ section {
     padding-bottom: calc(0px + 0 * ((100vw - 320px) / (1127)));
   }
 }
+
+.webp .popub{ background-image: url(../img/Contacts.webp), #FFFFFF; }
 
 .webp .intro{ background-image: url(../img/bg/intro.webp); }
 
