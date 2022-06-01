@@ -1,0 +1,215 @@
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #000;
+    min-height: 102px;
+    border-left: 8px solid #C0B0B0;
+    &__container{
+        max-width: 100%;
+        @include adaptiv-value('padding-right', 90, 20, 3);
+        padding-left: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo{
+        @include adaptiv-value("font-size", 49, 20, 3);
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        & img{
+            display: block;
+            width:76;
+            height: 70px;
+            margin-left: 18px;
+            object-fit: contain;
+        }
+    }
+    .menu{
+        min-height: 102px;
+        max-width: 800px;
+        width: 100%;
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        & ul li a {
+            display: inline-block;
+            padding: 42px 0;
+            letter-spacing: normal;
+            word-break: none;
+            @include adaptiv-value('padding-right', 64, 18, 3);
+            @include adaptiv-value('padding-left', 58, 11, 3);
+            font-size: 20px;
+            transition: .3s all ease;
+            &:hover{
+                background: #B1ACA9;
+                color: #000;
+            }
+        }
+    }
+}
+.popub{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+@media (max-width: 1370px) {
+    .header__logo span{
+        display: none;
+    }
+    .menu{
+        @include adaptiv-value('padding-right', 0, 0, 3);
+    }
+}
+.burger{
+    display: none;
+    width: 60px;
+    height: 35px;
+    position: relative;
+    &::before, &::after{
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s transform ease;
+    }
+    &._active{
+        &::before{
+            transition: .3s transform ease;
+            transform:translate(0px, 10px) rotate(45deg);
+        }
+        &::after{
+            transition: .3s transform ease;
+            transform:translate(0px, -17px) rotate(-45deg);
+        }
+        
+    }
+    &-body{
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        display: block;
+        top: 15px;
+        left: 0;
+        background: #fff;
+        transition: .3s transform ease;
+        &._active {
+            transform: scale(0);
+        }
+    }
+    &:after{
+        top: 30px;
+    }
+}
+.barber{
+    position: fixed;
+    padding-top: 26px;
+    top: 0px;
+    left: -100%;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100%;
+    background: #000;
+    padding-left: 60px;
+    transition: .3s left ease;
+    &._active{
+        left: 0;
+    }
+    .exit{
+        top: 26px;
+        left: 24px;
+        position: absolute;
+    }
+    &__image{
+        max-width: 700px;
+        flex: 1 1  auto;
+        height: auto;
+        overflow: hidden;
+        border-radius: 25px;
+        & img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__container{
+        display: flex;
+        gap: 59px;
+        align-items: flex-start;
+    }
+    &__desc{
+        text-align: center;
+        flex: 1 1 auto;
+        width: 100%;
+        & p{
+            color: $ColorText;
+            margin-bottom: 70px;
+        }
+    }
+    &__name{
+        font-size: 45px;
+    }
+    &__btn{
+        padding: 21px 25px;
+        border: 1px solid #C0B0B0;
+        border-radius: 25px;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: $ColorText;
+        transition: .3s all ease;
+        &:hover{
+            background: #ffffff;
+            color: #000;
+        }
+    }
+}
+@media (max-width:994px) {
+    .barber{
+        &__container{
+            flex-direction: column;
+        }
+        &__image{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+}
+@media (max-width: 790px) {
+    .burger{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        top: 102px;
+        left: -100%;
+        width: 100vw;
+        height: calc(100vh - 102px);
+        overflow-y: auto;
+        background:  #000;
+        padding-bottom: 102px;
+        transition: .3s left ease;
+        &._active{
+            left: 0;
+        }
+        & ul{
+
+            flex-direction: column;
+            & li a{
+                @include adaptiv-value('font-size', 30, 30, 3);
+                @include adaptiv-value('padding-top', 0, 0, 3);
+                @include adaptiv-value('padding-bottom', 0, 0, 3);
+            }
+        }
+    }
+}

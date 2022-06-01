@@ -1,0 +1,41 @@
+.history{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url("../img/bg/history.jpg");
+    &__container{
+        margin-bottom: 51px;
+    }
+    &__card{
+        gap: 25px;
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        & p{
+            max-width: 494px;
+        }
+        &:nth-child(even){
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        &:not(:last-child){
+            margin-bottom: 19px;
+        }
+    }
+}
+.card__image{
+    max-width: 537px;
+    height: auto;
+    overflow: hidden;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media (max-width:1097px) {
+    .history{
+        &__card{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

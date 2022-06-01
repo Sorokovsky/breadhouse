@@ -1,0 +1,50 @@
+.footer{
+    background: #000;
+    padding: 45px 0;
+    &__container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .call{
+            display: flex;
+            align-items: center;
+            max-width: 347px;
+            gap: 14px;
+            &__phones{
+                display: flex;
+                flex-direction: column;
+                gap: 23px;
+            }
+        }
+        .map{
+            max-width: 279px;
+            height: auto;
+        }
+        .address p{
+            text-align: center;
+            max-width: 548px;
+        }
+    }
+    &__card{
+        max-width: 548px;
+        & iframe{
+            width: 279px;
+            height: 251px;
+        }
+    }
+    &__icon{
+        width: 49px;
+        height: 49px;
+    }
+}
+@media (max-width:1098px) {
+    .footer{
+        &__container{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__card{
+            margin-bottom: 30px;
+        }
+    }
+}
