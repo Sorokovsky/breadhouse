@@ -1,12 +1,16 @@
 .barbers{
     background-image: url('../img/Barbers.jpg');
-    background-size: cover ;
-    background-position: 0 -500px;
-    z-index: 1000000;
-    padding-left: 0;
+    background-size: cover;
     background-attachment: fixed;
-    overflow-y: auto;
-    background-repeat: no-repeat;
+    top: -101%;
+    transition: .3s all linear;
+    &._active{
+        transition: .3s all linear;
+        top: 0;
+    }
+    &._active{
+        top: 0;
+    }
     .exit{
         position: absolute;
         top: 25px;
@@ -20,7 +24,10 @@
         justify-content: space-between;
     }
     &__item{
-        padding-bottom: 35px;
+        padding: 35px 0;
+        &:first-child{
+            padding-top: 0;
+        }
         border-bottom: 2px solid $ColorText;
     }
     &__left{
@@ -29,6 +36,24 @@
         img{
             border-radius: 50%;
             margin-right: 40px;
+        }
+    }
+}
+@media (max-width:664px) {
+    .barbers{
+        &__card{
+            flex-direction: column;
+        }
+        &__left{
+            & img{
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+            flex-direction: column;
+            
+        }
+        &__btn{
+            margin-top: 15px;
         }
     }
 }

@@ -54,14 +54,6 @@
         }
     }
 }
-.popub{
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
 @media (max-width: 1370px) {
     .header__logo span{
         display: none;
@@ -118,10 +110,11 @@
     position: fixed;
     padding-top: 26px;
     top: 0px;
-    left: -10000%;
+    left: 101%;
     overflow-y: auto;
     width: 100vw;
     height: 100%;
+    z-index: 1000;
     background: #000;
     padding-left: 60px;
     transition: .3s left ease;
@@ -180,20 +173,15 @@
 .popub{
     position: fixed;
     top: 0;
-    left: -100000%;
     width: 100vw;
-    z-index: 100;
     height: 100vh;
-    padding-top: 148px;
+    padding-top: 48px;
     padding-left: 31px;
     overflow-y: auto;
     display: block;
     transition: .3s left ease ;
     &__container{
         max-width: 1234px;
-    }
-    &._active{
-        left: 0;
     }
 }
 
