@@ -11,6 +11,8 @@ popubs.forEach(popub => {
             e.preventDefault();
             popub.classList.remove('_active');
             document.body.classList.remove('_lock')
+            target.parentElement.classList.remove('fixed');
+            console.log(target.parentElement);
         }
     });
 });
@@ -26,6 +28,11 @@ Array.from(navLink).forEach(link =>{
                   document.body.classList.add('_lock');
                   menu.classList.remove('_active');
                   burger.classList.remove('_active');
+                  const exit = el.children[0];
+                  console.log(exit);
+                  if(exit.classList.contains("exit")){
+                      setTimeout(() => exit.classList.add("fixed"), 300);
+                  }
                   closeAllPopubs();
                   burger.children[0].classList.remove('_active');
               } 
@@ -38,6 +45,7 @@ barbers.forEach(barber =>{
         const target = e.target;
         if(target.parentElement.classList.contains('exit')){
             barber.classList.remove('_active');
+            target.parentElement.remove('fixed')
         }
     });
 });

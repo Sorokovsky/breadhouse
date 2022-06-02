@@ -1,11 +1,12 @@
 #contact{
     right: -101%;
     transition: .3s all ease;
+    overflow-y: auto;    
     &._active{
         right: 0;
     }
     background-image: url("../img/Contacts.jpg");
-    .contact{       
+    .contact{   
         &-bottom{
             max-width: 846px;
             & h5{

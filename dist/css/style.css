@@ -8,6 +8,10 @@
           box-sizing: border-box;
 }
 
+.fixed {
+  position: fixed !important;
+}
+
 ._container {
   max-width: 100%;
   padding: 0 30px;
@@ -492,6 +496,7 @@ section {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  overflow-y: auto;
   background-image: url("../img/Contacts.jpg");
 }
 
