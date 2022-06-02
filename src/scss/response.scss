@@ -107,3 +107,26 @@
         }
     }
 }
+@media(max-width:620px){
+    .response{
+        &__person{
+            flex-direction: column;
+            text-align: center;
+        }
+        &__rate{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        &__head{
+            & p {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                & a{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
