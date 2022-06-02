@@ -25,11 +25,10 @@ body {
   text-align: center;
   background: #000;
   border: 4px solid #C0B0B0;
-  padding-top: 40px;
+  padding: 50px 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  padding-bottom: 62px;
 }
 
 .baner img {
@@ -622,6 +621,7 @@ section {
 .barbers {
   background-image: url("../img/Barbers.jpg");
   background-size: cover;
+  background-position: 0 center;
   background-attachment: fixed;
   top: -101%;
   -webkit-transition: 0.3s all linear;
@@ -681,6 +681,89 @@ section {
 .barbers__left img {
   border-radius: 50%;
   margin-right: 40px;
+}
+
+.choose {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../img/Barbers.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 0 center;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s all linear;
+  -o-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  padding-left: 0;
+  padding-top: 77px;
+}
+
+.choose__avatar {
+  border-radius: 50%;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.choose__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.choose__card {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  max-width: 503px;
+  gap: 40px;
+  margin-top: 90px;
+}
+
+.choose__card:hover .choose__avatar {
+  -webkit-box-shadow: 0px 0px 10px 20px rgba(170, 163, 163, 0.25);
+          box-shadow: 0px 0px 10px 20px rgba(170, 163, 163, 0.25);
+}
+
+.choose__card p {
+  font-size: calc(30px + 0 * ((100vw - 320px) / (1127)));
+  width: 221px;
+  text-transform: uppercase;
+}
+
+.choose._active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.choose h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin-bottom: 8px;
+}
+
+.choose .exit {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+
+.choose__container {
+  padding-top: 0;
 }
 
 .footer {
@@ -899,6 +982,21 @@ section {
   }
 }
 
+@media (max-width: 614px) {
+  .choose .choose__container h3 {
+    font-size: 30px;
+  }
+
+  .choose__card {
+    margin-top: 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+}
+
 .webp .intro{ background-image: url(../img/bg/intro.webp); }
 
 .webp .history{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.66)), to(rgba(0, 0, 0, 0.66))), url(../img/bg/history.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/history.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/history.webp); }
@@ -910,3 +1008,5 @@ section {
 .webp #contact{ background-image: url(../img/Contacts.webp); }
 
 .webp .barbers{ background-image: url(../img/Barbers.webp); }
+
+.webp .choose{ background-image: url(../img/Barbers.webp); }
