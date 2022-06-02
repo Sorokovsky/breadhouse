@@ -8,6 +8,7 @@ popubs.forEach(popub => {
     popub.addEventListener('click', (e) => {
         const { target } = e;
         if (target.parentElement.classList.contains("exit")) {
+            e.preventDefault();
             popub.classList.remove('_active');
             document.body.classList.remove('_lock')
         }
@@ -16,10 +17,10 @@ popubs.forEach(popub => {
 Array.from(navLink).forEach(link =>{
     link.addEventListener('click', (e) => {
         const { target } = e;
-        e.preventDefault();
         const selector = target.getAttribute('data-open');
         const el = document.querySelector(selector);
         if(el ){
+            e.preventDefault(); 
               if(!el.classList.contains('_active')){
                   el.classList.add('_active');
                   document.body.classList.add('_lock');

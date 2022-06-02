@@ -1,15 +1,13 @@
 .barbers{
+    background-attachment: fixed;
     background-image: url('../img/Barbers.jpg');
     background-size: cover;
     background-position: 0 center;
-    background-attachment: fixed;
+    overflow-y: auto;
     top: -101%;
     transition: .3s all linear;
     &._active{
         transition: .3s all linear;
-        top: 0;
-    }
-    &._active{
         top: 0;
     }
     .exit{

@@ -1,0 +1,109 @@
+.response{
+    background-image: url('../img/Barbers.jpg');
+    background-attachment: fixed;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    padding: 0 10px;
+    top: 0;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    transition: .3s left linear;
+    left: -101%;
+    &__60{
+        @include adaptiv-value('font-size', 51, 21, 3);
+    }
+    &__50{
+        @include adaptiv-value('font-size', 41, 11, 3);
+    }
+    .exit{
+        top: 25px;
+        left: 25px;
+        position: absolute;
+    }
+    &._active{
+        left: 0;
+    }
+    &__head{
+        & h5{
+            margin-top: 15px;
+            @include adaptiv-value('font-size', 31, 11, 3);
+            margin-bottom: 115px;
+        }
+        & p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & a{
+                color: #83a4e2;
+                margin-right: 25px;
+                margin-left: 5px;
+            }
+            & img{
+                display: block;
+                margin-right: 4px;
+                width: 33px;
+                height: 33px;
+                &:last-child{
+                    margin-right: 9px;
+                }
+            }
+            & span{
+                color: #fff;
+            }
+        }
+    }
+    &__body{
+        margin-top: 69px;
+    }
+    &__card{
+        &:not(:first-child){
+            margin-top: 20px;
+        }
+    }
+    &__rate{
+        margin-bottom: 16px;
+        & img{
+            width: 26px;
+            height: 26px;
+            &:not(:last-child){
+                margin-right: 5px;
+            }
+        }
+    }
+    &__person{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+        & p{
+            @include adaptiv-value("font-size", 31, 11, 3)
+        }
+    }
+    &__image{
+        width: 123px;
+        height: 123px;
+        overflow: hidden;
+        border-radius: 50%;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__container{
+        max-width: 1150px;
+        margin: 0 auto;
+        margin-bottom: 26px;
+        margin-top: 109px;
+        & .response__head{
+            text-align: center;
+            & h2{
+                text-transform: uppercase;
+            }
+        }
+    }
+}

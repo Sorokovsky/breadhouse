@@ -11,6 +11,7 @@
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
+    top: -101%;
     transition: .3s all linear;
     padding-left: 0;
     &__avatar{
@@ -45,6 +46,7 @@
     &._active{
         visibility: visible;
         opacity: 1;
+        top: 0;
     }
     padding-top: 77px;
     & h3{
