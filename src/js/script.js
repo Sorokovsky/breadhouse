@@ -45,7 +45,7 @@ barbers.forEach(barber =>{
         const target = e.target;
         if(target.parentElement.classList.contains('exit')){
             barber.classList.remove('_active');
-            target.parentElement.remove('fixed')
+            target.parentElement.classList.remove('fixed')
         }
     });
 });
