@@ -153,6 +153,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header .menu ul li a {
@@ -565,6 +568,10 @@ section {
 }
 
 #contact .contact__phones div a {
+  font-family: Arial, sans-serif;
+}
+
+#contact .contact__phones div a {
   display: block;
   margin-bottom: 13px;
 }
@@ -619,7 +626,6 @@ section {
 }
 
 .barbers {
-  background-attachment: fixed;
   background-image: url("../img/Barbers.jpg");
   background-size: cover;
   background-position: 0 center;
@@ -679,7 +685,6 @@ section {
   top: 0;
   left: 0;
   background-image: url("../img/Barbers.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -761,7 +766,6 @@ section {
 
 .response {
   background-image: url("../img/Barbers.jpg");
-  background-attachment: fixed;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -936,6 +940,7 @@ section {
 }
 
 .footer__container .call__phones {
+  font-family: Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

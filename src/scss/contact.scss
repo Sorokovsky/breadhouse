@@ -47,6 +47,9 @@
             }
         }
         &__phones{
+            & div a{
+                font-family: Arial, sans-serif;
+            }
             display: flex;
             align-items: center;
             gap: 23px;
