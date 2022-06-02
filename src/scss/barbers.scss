@@ -1,6 +1,11 @@
+.exit{
+    position: absolute;
+    top: 25px;
+    left: 41px;
+}
 .barbers{
     background-attachment: fixed;
-    background-image: url('../img/Barbers.jpg');
+    background-image: url("../img/Barbers.jpg");
     background-size: cover;
     background-position: 0 center;
     overflow-y: auto;
@@ -10,11 +15,7 @@
         transition: .3s all linear;
         top: 0;
     }
-    .exit{
-        position: absolute;
-        top: 25px;
-        left: 41px;
-    }
+    
     &__card{
         display: flex;
         align-items: center;

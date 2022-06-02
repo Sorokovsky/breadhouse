@@ -36,15 +36,11 @@
         & ul {
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
         & ul li a {
             display: inline-block;
-            padding: 42px 0;
+            padding: 42px 60px;
             letter-spacing: normal;
-            word-break: none;
-            @include adaptiv-value('padding-right', 64, 18, 3);
-            @include adaptiv-value('padding-left', 58, 11, 3);
             font-size: 20px;
             transition: .3s all ease;
             &:hover{
@@ -52,6 +48,11 @@
                 color: #000;
             }
         }
+    }
+}
+@media (max-width:1464px) {
+    .header__logo{
+        font-size: 35px;
     }
 }
 @media (max-width: 1370px) {

@@ -1,11 +1,12 @@
 .response{
-    background-image: url('../img/Barbers.jpg');
+    background-image: url("../img/Barbers.jpg");
     background-attachment: fixed;
     position: fixed;
     width: 100vw;
     height: 100vh;
     display: block;
     padding: 0 10px;
+    background-position: 0 center;
     top: 0;
     overflow-y: auto;
     background-size: cover;

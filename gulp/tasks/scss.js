@@ -13,10 +13,6 @@ export const scss = () => {
             outputStyle: 'expanded'
         }))
         .pipe(groupCssMediaQueries())
-        .pipe(webpcss({
-            webpClass: '.webp',
-            nowebpClass: '.no-webp'
-        }))
         .pipe(autoprefixer({
             grid: true,
             overrideBrowserslist: ['last 3 versions'],

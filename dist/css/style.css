@@ -149,18 +149,12 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .header .menu ul li a {
   display: inline-block;
-  padding: 42px 0;
+  padding: 42px 60px;
   letter-spacing: normal;
-  word-break: none;
-  padding-right: calc(18px + 46 * ((100vw - 320px) / (1127)));
-  padding-left: calc(11px + 47 * ((100vw - 320px) / (1127)));
   font-size: 20px;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -613,6 +607,12 @@ section {
           justify-content: space-between;
 }
 
+.exit {
+  position: absolute;
+  top: 25px;
+  left: 41px;
+}
+
 .barbers {
   background-attachment: fixed;
   background-image: url("../img/Barbers.jpg");
@@ -630,12 +630,6 @@ section {
   -o-transition: 0.3s all linear;
   transition: 0.3s all linear;
   top: 0;
-}
-
-.barbers .exit {
-  position: absolute;
-  top: 25px;
-  left: 41px;
 }
 
 .barbers__card {
@@ -768,6 +762,7 @@ section {
   height: 100vh;
   display: block;
   padding: 0 10px;
+  background-position: 0 center;
   top: 0;
   overflow-y: auto;
   background-size: cover;
@@ -968,6 +963,12 @@ section {
 .footer__icon {
   width: 49px;
   height: 49px;
+}
+
+@media (max-width: 1464px) {
+  .header__logo {
+    font-size: 35px;
+  }
 }
 
 @media (max-width: 1447px) {
@@ -1189,19 +1190,3 @@ section {
     gap: 15px;
   }
 }
-
-.webp .intro{ background-image: url(../img/bg/intro.webp); }
-
-.webp .history{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.66)), to(rgba(0, 0, 0, 0.66))), url(../img/bg/history.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/history.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/history.webp); }
-
-.webp .mens{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/bg/mens.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg/mens.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg/mens.webp); }
-
-.webp .contacts{ background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.66)), to(rgba(0, 0, 0, 0.66))), url(../img/bg/contacts.webp); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/contacts.webp); background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url(../img/bg/contacts.webp); }
-
-.webp #contact{ background-image: url(../img/Contacts.webp); }
-
-.webp .barbers{ background-image: url(../img/Barbers.webp); }
-
-.webp .choose{ background-image: url(../img/Barbers.webp); }
-
-.webp .response{ background-image: url(../img/Barbers.webp); }
