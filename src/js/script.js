@@ -69,4 +69,23 @@ function closeAllPopubs(){
     const pops = Array.from(document.querySelector('.popub'));
     pops.forEach(pop => pop.classList.remove('_active'))
 }
+function comment(){
+    const comments = Array.from(document.querySelectorAll('.comment'));
+    comments.forEach(comment => {
+        let com = comment.innerHTML;
+        console.log(com.length);
+        if(com.length >= 120){
+            comment.insertAdjacentHTML('afterend', `<a href="#" class="response__etc"><img src="img/icons/etc.svg" alt=""></a>`);
+        }
+    });
+    const etcs = Array.from(document.querySelectorAll('.response__etc'));
+    etcs.forEach(el => el.addEventListener('click', (e) => {
+        const { target } = e;
+        e.preventDefault();
+        const com = target.parentElement.previousElementSibling;
+        com.classList.toggle('open');
+        console.log(com);
+    }));
+}
+comment();
 isWebp();

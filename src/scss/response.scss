@@ -123,6 +123,12 @@
 }
 .comment{
     margin-left: 26px;
+    height: 108px;
+    overflow: hidden;
+    transition: .3s height linear;
+    &.open{
+        height: 100%;
+    }
 }
 @media(max-width:620px){
     .response{
