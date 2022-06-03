@@ -83,7 +83,6 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        justify-content: space-between;
         & p{
             
             @include adaptiv-value("font-size", 31, 11, 3)
@@ -93,6 +92,7 @@
         width: 123px;
         height: 123px;
         overflow: hidden;
+        
         border-radius: 50%;
         & img{
             width: 100%;
@@ -112,6 +112,17 @@
             }
         }
     }
+    &__btn{
+        display: block;
+        max-width: 1020px;
+        margin: 0 auto;
+        margin-top: 105px;
+        width: 100%;
+        text-align: center;
+    }
+}
+.comment{
+    margin-left: 26px;
 }
 @media(max-width:620px){
     .response{

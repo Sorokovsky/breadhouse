@@ -873,9 +873,6 @@ section {
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .response__person p {
@@ -909,6 +906,19 @@ section {
 
 .response__container .response__head h2 {
   text-transform: uppercase;
+}
+
+.response__btn {
+  display: block;
+  max-width: 1020px;
+  margin: 0 auto;
+  margin-top: 105px;
+  width: 100%;
+  text-align: center;
+}
+
+.comment {
+  margin-left: 26px;
 }
 
 .footer {
