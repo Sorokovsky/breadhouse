@@ -54,16 +54,18 @@ function isWebp(){
     document.querySelector('body').classList.add('no-webp');
 }
     burger.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (e.target.classList.contains('_active')){
-            e.target.classList.remove('_active');
-            e.target.children[0].classList.remove('_active');
+        console.log(e.target);
+        
+        if (menu.classList.contains('_active')){
+            burger.classList.remove('_active');
             menu.classList.remove('_active');
+            e.target.children[0].classList.remove('_active');
         }else{
-            e.target.classList.add('_active');
-            e.target.children[0].classList.add('_active');
+            burger.classList.add('_active');
             menu.classList.add('_active');
+            e.target.children[0].classList.add('_active');
         }
+        e.preventDefault();
     });
 function closeAllPopubs(){
     const pops = Array.from(document.querySelector('.popub'));

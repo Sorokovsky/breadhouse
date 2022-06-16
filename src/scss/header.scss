@@ -90,6 +90,9 @@
             transition: .3s transform ease;
             transform:translate(0px, -17px) rotate(-45deg);
         }
+        & .burger-body {
+            transform: scale(0);
+        }
         
     }
     &-body{
