@@ -59,11 +59,11 @@ function isWebp(){
         if (menu.classList.contains('_active')){
             burger.classList.remove('_active');
             menu.classList.remove('_active');
-            e.target.children[0].classList.remove('_active');
+            burger.children[0].classList.remove('_active');
         }else{
             burger.classList.add('_active');
             menu.classList.add('_active');
-            e.target.children[0].classList.add('_active');
+            burger.children[0].classList.add('_active');
         }
         e.preventDefault();
     });
